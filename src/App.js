@@ -17,7 +17,9 @@ class App extends React.Component {
           <img src={logo} className="App-logo" alt="logo" />
           <button
             onClick={() =>
-              this.setState((state) => ({ showChild: !state.showChild }))
+              this.setState((state) => ({
+                showChild: !state.showChild,
+              }))
             }
           >
             Toggle Lifecycles

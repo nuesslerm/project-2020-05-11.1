@@ -19,8 +19,15 @@ class Lifecycles extends React.Component {
     console.log('componentWillUnmount!');
   }
 
+  /**
+   * for performance:
+   * if the properties coming in (nextProps)
+   * are the same as the properties that we already have (props)
+   * then don't re-render
+   */
   shouldComponentUpdate(nextProps, nextState) {
     console.log('shouldComponentUpdate!', nextProps);
+    // return false;
     return nextProps.text !== this.props.text;
   }
 
