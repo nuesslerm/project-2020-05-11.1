@@ -1,12 +1,13 @@
 import React from 'react';
 
 class Lifecycles extends React.Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
     console.log('constructor!');
   }
 
   componentDidMount() {
+    // this is where you do API calls after the base class component was mounted
     console.log('componentDidMount!');
   }
 
